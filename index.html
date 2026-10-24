@@ -1,0 +1,369 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>monti's website</title>
+  <script src="app.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Momo+Signature&family=Pacifico&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    body{
+      background-image: url("background-.jpg");
+      cursor: url("cursor.jpg"), auto;
+    }
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ffa4bb;
+      background-color: #f1f1f1;
+      border-radius: 10px;
+      background-color: lightpink;
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+      border-radius: 12px;
+      font-family: "Pacifico", sans-serif;
+      color: #ed6d91;
+    }
+
+
+    .tab button:hover {
+      background-color: #ed6d91;
+    }
+
+    .tab button:active {
+      background-color: #ffa4bb;
+    }
+
+    .tabcontent {
+      display: none;
+      padding: 4px 17px;
+      border: 1px solid #ece0da;
+      border-top: none;
+      border-radius: 10px;
+      background-color: #fff9f8;
+      animation: fadeEffect 1s;
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+
+    h1 {
+      font-family: "Momo Signature", cursive;
+      font-weight: 400;
+      font-style: normal;
+      color: #ea4574;
+      text-align: center;
+      font-size: 48px;
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    h2 {
+      font-family: "Pacifico", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      color: #6a823e;
+      text-align: center;
+    }
+
+    h3{
+      font-family: "Pacifico", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      color: #6a823e;
+      text-align: justify;
+      font-size: 24px;
+    }
+    h4 {
+      font-family: "Pacifico", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      color: rgba(30, 5, 5, 0.92);
+    }
+    p{
+      font-family: "Sour Gummy", sans-serif;
+      text-align: justify;
+      font-size: 20px;
+    }
+
+    .cinna-pink {
+      float: right;
+    }
+
+    .dollcat{
+      width: 40%;
+      height: auto;
+      float: right;
+    }
+
+    .dollbow{
+      width: 25%;
+      height: auto;
+      float: right;
+      justify-content: center;
+    }
+    .booklist{
+      font-family: "Sour Gummy", sans-serif;
+    }
+
+    .socials{
+      font-family: "Sour Gummy", sans-serif;
+      font-size: 22px;
+    }
+
+    .moviecont {
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+
+    #quote {
+      font-size: 18px;
+      font-family: "Sour Gummy", sans-serif;
+      font-style: italic;
+      margin: 10px;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgb(106, 130, 62);
+      max-width: 600px;
+      text-align: center;
+    }
+    .buttonq {
+      font-family: "Sour Gummy", sans-serif;
+      padding: 12px 24px;
+      margin: 5px 10px;
+      font-size: 16px;
+      background: #ffa4bb;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .buttonq:hover {
+      background: #ed6d91;
+    }
+
+    .wheredocats {
+      border: 10px solid;
+      border-color: #ed6d91;
+      border-radius: 10px;
+      width: 50%;
+      height: auto;
+    }
+
+    .topovsaguila {
+    border: 10px solid;
+    border-color: #ed6d91;
+    border-radius: 10px;
+    width: 50%;
+    height: auto;
+    }
+
+    .adivina {
+      border: 10px solid;
+      border-color: #ed6d91;
+      border-radius: 10px;
+      width: 50%;
+      height: auto;
+    }
+
+    .projcont{
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+
+
+  </style>
+</head>
+<body>
+<h1>⋆｡˚꒰ঌ Monti's website ໒꒱˚｡⋆</h1>
+<h2> Welcome! Welcome! Welcome to my attempt at making a personal page. </h2>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Me?')" id="defaultOpen">Me?</button>
+  <button class="tablinks" onclick="openCity(event, 'Music')">Music</button>
+  <button class="tablinks" onclick="openCity(event, 'TV & Movies')">TV & Movies</button>
+  <button class="tablinks" onclick="openCity(event, 'Books')">Books</button>
+  <button class="tablinks" onclick="openCity(event, 'Projects?')">Projects?</button>
+  <button class="tablinks" onclick="openCity(event, 'Socials')">Socials</button>
+</div>
+
+<div id="Me?" class="tabcontent">
+  <img class="cinna-pink" src="cinna%20pink.png" alt="cinnamoroll-pink">
+  <h3>About me ⊹˚. ♡.𖥔 ݁ ˖</h3>
+  <p> Hiiiiiiiii ♡</p>
+  <p> My name's <b>Monti</b>, I'm <b>16</b> and I'm a girl from <b>Colombia</b> whose friend forced her into coding for free travels :3 (thank you beesfan)</p>
+  <p>BUT. I'm terribly new to all of this coding and designing, so please bare with me while I learn a bit more jeje.</p>
+  <p>I looooove all things cute: cinnamoroll, calico critters, mofusand, miffy... I could go on. You'll see a lot of this on this website :3 </p>
+  <p>What else can I tell you about me? Uhhh I LOVE reading, you can check my fav books in the <i>Books</i> tab.</p>
+</div>
+
+<div id="Music" class="tabcontent">
+  <h3>Music ♫⋆｡♪ ₊˚♬ ﾟ.</h3>
+  <p>Okay sooo about music.</p>
+  <p> My favorite artists include: Malcolm Todd, DJO, Juanes, grentperez, Topline Addicts, Alan Sutton... etc, etc.</p>
+  <p> Here's a playlist with all my favorite songs in the whole world.</p>
+  <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1xvNzD0cUlCAsiiV9gkoTM?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  <p>Also,  I play percussion in my school's symphonic band. We've won several contests here in Colombia and a second place in the World Music Contest in Kerkrade, Netherlands. No words ever could express how much I love my team <3</p>
+  <p>Here's a video of our presentation in the Netherlands:</p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/SGly3CRUlOk?si=tFYkm15Rnvc6iH5Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div id = "TV & Movies" class="tabcontent">
+  <h3>TV & Movies . ݁₊ ⊹ . 📽.ᐟ</h3>
+  <p>Here's a list of my favorite series and movies, with the rating I have to each!!</p>
+  <div class="moviecont">
+    <div class="ST">
+      <p><b>Stranger things</b></p>
+      <p>5 seasons (haven't finished yet lol)- series</p>
+      <p>★★★★⯪</p>
+    </div>
+    <div class="KM">
+      <p><b>Kingsman</b></p>
+      <p>Trilogy- movies - rec: The King's man (prequel)</p>
+      <p>★★★★★</p>
+    </div>
+    <div class="EL">
+      <p><b>Eva Lasing</b></p>
+      <p>4 seasons (yayy march 18)- series</p>
+      <p>★★★★☆</p>
+    </div>
+    <div class="KO">
+      <p><b>Knives out</b></p>
+      <p>Trilogy- movies - rec: Wake up dead man! (3rd movie)</p>
+      <p>★★★★★</p>
+    </div>
+    <div class="TP">
+      <p><b>The Pitt</b></p>
+      <p>2 seasons- series</p>
+      <p>★★★★☆</p>
+    </div>
+    <div class="GH">
+      <p><b>Ghosted</b></p>
+      <p>movie (chris evans and ana de armas)</p>
+      <p>★★★★☆</p>
+    </div>
+  </div>
+</div>
+
+<div id = "Books" class="tabcontent">
+  <h3>Books⋆☕︎ ˖ᝰ.ᐟ</h3>
+  <p>Some quotes I love...</p>
+  <img class="dollcat" src="dollcat.jpg" alt="cat ceramic">
+  <div class="bookcont">
+    <blockquote id="quote">"The fate gave the queen a look more vicious than any curse. 'There is nothing of equal value to me.'" -Stephanie Garber, The Ballad of Never After</blockquote>
+    <button class="buttonq" onclick="generateQuote()">Other quote</button>
+  </div>
+  <p>I though I was a thriller mystery reader but turns out... I love romance but fantasy-magical-destiny romance. If someone has recs for me pleeeease tell me.</p>
+  <p>Okaaayyy so my fav books are:</p>
+  <ol class="booklist">
+    <li><b>Piranesi</b> - Susanne Clark</li>
+    <li>Once Upon a Broken Heart, <b>The Ballad of Never After</b> and A Curse for True Love - Stephanie Garber</li>
+    <li>Sunrise on the Reaping - Suzanne Collins</li>
+    <li>The Folk of the Air books - Holly Black</li>
+    <li>Shatter me saga - Tahereh Mafi (GOD I LOVE THESE BOOKS)</li>
+    <li>etc etc etc more books... check em out at <a href="https://www.goodreads.com/loumonti">my goodreads!</a></li>
+  </ol>
+</div>
+
+<div id = "Projects?" class="tabcontent">
+  <h3>ᯓ★Projects?</h3>
+  <div class="projcont">
+    <div class="firsteverproj">
+      <p><u> 1. My first ever project!! ⋆˙⟡</u></p>
+      <a href="https://loumonti.github.io/where-do-cats-come-from/">
+        <img class="wheredocats" src="wheredocats.jpg" alt="page">
+      </a>
+      <p> I did it for the YSWS Meow! :3</p>
+    </div>
+
+    <div class="firstevergame">
+      <p> <u>2. My first ever game!! .✦ ݁˖</u></p>
+      <a href="https://beesfan.itch.io/topo-vs-aguila">
+        <img class="topovsaguila" src="topovsaguila.jpg" alt="gamepage">
+      </a>
+      <p> I also did my first game recently at Campfire at my country with my friend Beesfan!! Its bout a mole running from an eagle and rats and snakes and yes</p>
+      <p> I basically did all the pixel art by myself and like 1 line of code hehe.</p>
+    </div>
+
+    <div class="macondo">
+      <p><u> 3. Macondo gamejam!</u> </p>
+      <a href="https://loumonti.github.io/adivina-de-quien-es/">
+        <img class="adivina" src="adivinadequienes.png" alt="gamepage">
+      </a>}
+      <div class="textmacondo">
+        <p> Did it alongside Salmitaaa (mebamita) the Amazing Chimba Duo the best team everrrrr. </p>
+        <p> 11h and 2 sleepless nights for this page but hella cool</p>
+      </div>
+    </div>
+
+    <div class="bobabashproj">
+      <p><u> 4. 404 BobaTea Not Found?</u></p>
+      <a href=""
+    </div>
+
+  </div>
+</div>
+
+<div id = "Socials" class="tabcontent">
+  <h3>Socials⋆˚꩜｡</h3>
+  <div class="socialcont">
+    <img class="dollbow" src="dollbow.png" alt="green bow">
+    <ul class="socials">
+      <li> <a href="https://www.instagram.com/monti.lumg/">My Instagram acc! The username is @lumontigu </a></li>
+      <li>And my Roblox username is <i>r3dpa</i> so we can play games together :3</li>
+      <li>Also my github username is <i>Loumonti</i>.</li>
+    </ul>
+</div>
+
+<script>
+  document.getElementById("defaultOpen").click();
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  const quotes = [
+    { text: "I believe there are far more possibilities than happily ever after or tragedy. Every story has the potential for infinite endings.", author: "Stephanie Garber, Once Upon a Broken Heart"},
+    { text: "And he loved her. He loved her. He loved her. He loved her so much he'd rewritten history.", author: "Stephanie Garber, A Curse for True Love"},
+    { text: "Once upon a time, a girl who believed in fairytales stole the heart of a prince who had sworn to never love.", author: "Stephanie Garber, A Curse for True Love"},
+    { text: "She imagined loving him would feel like falling in love with darkness, frightening and consuming yet utterly beautiful when the stars came out.", author: "Stephanie Garber, Caraval"},
+    { text: "The Beauty of the House is inmmeasurable; its Kindness infinite.", author: "Susanna Clark, Piranesi"},
+    { text: "It does not matter that you do not understand the reason. You are the Beloved Child of the House. Be comforted. And I am comforted.", author: "Susanna Clark, Piranesi"},
+    { text: "May your Paths be safe, your Floors unbroken and may the House fill your eyes with Beauty.", author: "Susanna Clark, Piranesi"},
+    { text: "I love you like all-fire", author: "Suzanne Collins, Sunrise on the Reaping"},
+    { text: "The moment our hearts shattered? It belongs to us.", author: "Suzanne Collins, Sunrise on the Reaping"},
+    { text: "No right to take away their life and freedom. Those are things everyone is born with and they're not yours for the taking.", author: "Suzanne Collins, Sunrise on the Reaping"},
+    { text: "Our minds sometimes see what our hearts wish were true.", author: "Dan Brown, Angels & Demons"},
+    { text: "The only difference between you and God is that you have forgotten you are divine.", author: "Dan Brown, The Lost Symbol"},
+    { text: "The fate gave the queen a look more vicious than any curse. 'There is nothing of equal value to me.'", author: "Stephanie Garber, The Ballad of Never After"}
+  ];
+
+  function generateQuote() {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    const quote = quotes[randomIndex];
+    document.getElementById("quote").innerHTML = `"${quote.text}" – ${quote.author}`;
+  }
+</script>
